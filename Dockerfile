@@ -7,7 +7,7 @@ WORKDIR /tmp
 RUN apt-get update \
   && chmod +x install_opencv.sh \
   && ./install_opencv.sh 3.2.0 \
-  && apt-get remove -y build-essential cmake git curl lib*-dev \
+  && apt-get remove -y build-essential cmake git curl \
   && apt-get clean -y \
   && apt-get autoclean -y \
   && apt-get autoremove -y
